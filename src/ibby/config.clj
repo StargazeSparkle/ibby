@@ -12,9 +12,9 @@
 (def configuration (create-struct
               :username
               :password
+              :protocol
               :host
-              :api-path
-              :ssl))
+              :api-path))
 
 ;;; config-example
 ; this is an example of a proper configuration.
@@ -28,9 +28,9 @@
 (def config-example
         (struct configuration "Username"
                 "Password"
+                "https://"
                 "creepypasta.fandom.com"
-                "/api.php"
-                true))
+                "/api.php"))
 
 ;;; config
 ; DO NOT FILL THIS OUT AND THEN COMMIT
