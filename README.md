@@ -1,44 +1,28 @@
 # ibby
 
-FIXME: description
+ibby (lowercase) is an attempt at making a functional and useful MediaWiki client in Clojure. ibby mainly targets the Fandom installations but there is no reason that it could not be extended in order to work on any arbitrary installation. 
 
 ## Installation
 
-Download from http://example.com/FIXME.
+Requirements:
+* leiningen
+* clojure
+* jdk 8
+
+Simply git-clone this repository and run `lein run` from inside of it.
 
 ## Usage
 
-FIXME: explanation
 
-    $ java -jar ibby-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+    $ cd ibby
+    $ lein run
 
 ## License
 
-Copyright © 2020 FIXME
+Copyright © 2020 Stargaze Sparkle
 
-This program and the accompanying materials are made available under the
-terms of the Eclipse Public License 2.0 which is available at
-http://www.eclipse.org/legal/epl-2.0.
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
-This Source Code may also be made available under the following Secondary
-Licenses when the conditions for such availability set forth in the Eclipse
-Public License, v. 2.0 are satisfied: GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or (at your
-option) any later version, with the GNU Classpath Exception which is available
-at https://www.gnu.org/software/classpath/license.html.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.
