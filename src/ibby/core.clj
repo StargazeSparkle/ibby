@@ -4,6 +4,9 @@
 
 (use 'ibby.api)
 
+
 (defn -main
   [& args]
-  (println (login)))
+  (login)
+  (def edit-token (get-token))
+  (println (edit "Test" "Test test bot bot" edit-token)))

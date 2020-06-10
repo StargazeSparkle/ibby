@@ -24,6 +24,10 @@
 ; people. I do not provide any means of loading configurations from disk nor do
 ; I make any effort to load them from an environment variable. You are free to
 ; do this yourself just as long as the result in a valid config structure.
+;
+; UCP NOTICE: in order to use this on a UCP wiki you must visit
+; Special:BotPasswords and generate credentials there BEFORE they can be used
+; here to login.
 (def config
         (struct configuration "Username"
                 "Password"

@@ -13,6 +13,7 @@
                                     (:host config)
                                     (:api-path config))
                                {:accept :json
+                                :cookie-policy :standard
                                 :cookie-store cookie-store
                                 :query-params query}))))
 
@@ -24,5 +25,6 @@
                                      (:host config)
                                      (:api-path config))
                                 {:accept :json
+                                 :cookie-policy :standard
                                  :cookie-store cookie-store
                                  :form-params query}))))
