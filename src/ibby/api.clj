@@ -16,10 +16,10 @@
   The second time it accessess the endpoint is to authenticate using both the
   login credentials as well as the CSRF token."
   []
-  (def query-map {:action     "login"
-                  :lgname     (:username config)
+  (def query-map {:action "login"
+                  :lgname (:username config)
                   :lgpassword (:password config)
-                  :format     "json"})
+                  :format "json"})
   (def response (http/http-post query-map config))
   (def lgtoken (get-in response ["login" "token"]))
   (def login-with-token (assoc-in query-map [:lgtoken] lgtoken))
@@ -53,10 +53,10 @@
   The string `token` is the CSRF token needed to make the edit."
   [page content token]
   (def query-map {:action "edit"
-                   :title page
-                   :text content
-                   :token token
-                   :format "json"})
+                  :title page
+                  :text content
+                  :token token
+                  :format "json"})
   (http/http-post query-map config))
 
 ;; FIXME: This function currently does no error handling to discern whether or

@@ -31,10 +31,10 @@
                    (client/get (str (:protocol config)
                                     (:host config)
                                     (:api-path config))
-                               {:accept        :json
+                               {:accept :json
                                 :cookie-policy :standard
-                                :cookie-store  cookie-store
-                                :query-params  query}))))
+                                :cookie-store cookie-store
+                                :query-params query}))))
 
 (defn http-post
   "Performs an HTTP POST.
@@ -48,7 +48,7 @@
                    (client/post (str (:protocol config)
                                      (:host config)
                                      (:api-path config))
-                                {:accept        :json
+                                {:accept :json
                                  :cookie-policy :standard
-                                 :cookie-store  cookie-store
-                                 :form-params   query}))))
+                                 :cookie-store cookie-store
+                                 :form-params query}))))
