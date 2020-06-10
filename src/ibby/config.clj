@@ -28,5 +28,5 @@
         (struct configuration "Username"
                 "Password"
                 "https://"
-                "creepypasta.fandom.com"
+                "community.fandom.com"
                 "/api.php"))
