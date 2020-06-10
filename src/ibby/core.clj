@@ -1,10 +1,11 @@
 (ns ibby.core
   (:gen-class)
-  (:require [clojure.data.json :as json])
-  (:use ['ibby.api]))
+  (:require [ibby.api :as api]))
 
 (defn -main
   [& args]
-  (login)
-  (def edit-token (get-token))
-  (println (edit "Test" "Test test bot bot" edit-token)))
+  (api/login)
+  (def edit-token (api/get-token))
+  (println (api/edit-replace "Test2" "New text." edit-token))
+  (println (api/edit-prepend "Test2" "Prepended text." edit-token))
+  (println (api/edit-append "Test2" "Appended text." edit-token)))

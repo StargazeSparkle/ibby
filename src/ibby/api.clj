@@ -1,7 +1,7 @@
 (ns ibby.api
   (:require [clojure.data.json :as json]
-            ['ibby.config :refer config]
-            ['ibby.http :as http]))
+            [ibby.config :refer [config]]
+            [ibby.http :as http]))
 
 ;; FIXME: Add error checking for the login endpoint.
 ;;        Currently this function makes no effort to check whether or not the
