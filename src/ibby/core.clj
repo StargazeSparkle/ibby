@@ -6,6 +6,6 @@
   [& args]
   (api/login)
   (def edit-token (api/get-token))
-  (println (api/edit-replace "Test2" "New text." edit-token))
-  (println (api/edit-prepend "Test2" "Prepended text." edit-token))
-  (println (api/edit-append "Test2" "Appended text." edit-token)))
+  (println (api/edit-replace "Rhapsody" "Mama mia!" edit-token))
+  (println (api/edit-prepend "Rhapsody" "Mama mia!\n" edit-token))
+  (println (api/edit-append "Rhapsody" "\nMama mia let me go!" edit-token)))

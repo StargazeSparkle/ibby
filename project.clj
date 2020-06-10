@@ -6,6 +6,8 @@
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [org.clojure/data.json "1.0.0"]
                  [clj-http "3.10.1"]]
+                 ;[org.clojure/core.async "1.2.603"]
+                 ;[com.wsscode/async "1.0.10"]]
   :main ^:skip-aot ibby.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})

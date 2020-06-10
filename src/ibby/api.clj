@@ -16,14 +16,14 @@
   The second time it accessess the endpoint is to authenticate using both the
   login credentials as well as the CSRF token."
   []
-  (def query-map {:action     "login"
-                  :lgname     (:username config)
+  (def query-map {:action "login"
+                  :lgname (:username config)
                   :lgpassword (:password config)
-                  :format     "json"})
-  (def response (http/post query-map config))
+                  :format "json"})
+  (def response (http/http-post query-map config))
   (def lgtoken (get-in response ["login" "token"]))
   (def login-with-token (assoc-in query-map [:lgtoken] lgtoken))
-  (http/post login-with-token config))
+  (http/http-post login-with-token config))
 
 ;; FIXME: Gather all other tokens
 ;;        Currently this function does not make an effort to retrieve the
@@ -38,7 +38,7 @@
   (def query-map {:action "query"
                   :meta "tokens"
                   :format "json"})
-  (def response (http/get query-map config))
+  (def response (http/http-get query-map config))
   (get-in response ["query" "tokens" "csrftoken"]))
 
 ;; FIXME: This function currently does no error handling to discern whether or
@@ -53,11 +53,11 @@
   The string `token` is the CSRF token needed to make the edit."
   [page content token]
   (def query-map {:action "edit"
-                   :title page
-                   :text content
-                   :token token
-                   :format "json"})
-  (http/post query-map config))
+                  :title page
+                  :text content
+                  :token token
+                  :format "json"})
+  (http/http-post query-map config))
 
 ;; FIXME: This function currently does no error handling to discern whether or
 ;;        not the edit failed (ss 6/10/20).
@@ -75,7 +75,7 @@
                   :prependtext content
                   :token token
                   :format "json"})
-  (http/post query-map config))
+  (http/http-post query-map config))
 
 ;; FIXME: This function currently does no error handling to discern whether or
 ;;        not the edit failed (ss 6/10/20).
@@ -93,4 +93,4 @@
                   :appendtext content
                   :token token
                   :format "json"})
-  (http/post query-map config))
+  (http/http-post query-map config))

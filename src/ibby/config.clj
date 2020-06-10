@@ -10,11 +10,11 @@
 ;; api-path [string]
 ;; ssl      [boolean]
 (def configuration (create-struct
-              :username
-              :password
-              :protocol
-              :host
-              :api-path))
+                     :username
+                     :password
+                     :protocol
+                     :host
+                     :api-path))
 
 ;;; config-example
 ; this is an example of a proper configuration.
@@ -29,8 +29,8 @@
 ; Special:BotPasswords and generate credentials there BEFORE they can be used
 ; here to login.
 (def config
-        (struct configuration "Username"
-                "Password"
-                "https://"
-                "community.fandom.com"
-                "/api.php"))
+  (struct configuration "Username"
+          "Password"
+          "https://"
+          "community.fandom.com"
+          "/api.php"))
