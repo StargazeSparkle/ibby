@@ -5,13 +5,15 @@
 (use 'ibby.config)
 (use 'ibby.http)
 
-(def test-query {:action "query"
-                 :prop "revisions"
-                 :titles "Creepypasta_Wiki"
-                 :rvslots "*"
-                 :rvprop "content"
+(def login-query {:action "login"
+                 :lgname (:username config)
+                 :lgpassword (:password config)
                  :format "json"})
 
 (defn -main
   [& args]
-  (println (json/write-str (http-get test-query config-example))))
+  (def lgtoken (get-in
+               (http-post login-query config)
+               ["login" "token"]))
+  (def login-with-token (into (hash-map) [login-query {:lgtoken lgtoken}]))
+  (println (http-post login-with-token config)))

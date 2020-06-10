@@ -15,3 +15,14 @@
                                {:accept :json
                                 :cookie-store cookie-store
                                 :query-params query}))))
+
+(defn http-post
+  "takes a query hashmap and a config struct and performs a POST to the API"
+  [query config]
+  (json/read-str (:body
+                   (client/post (str (:protocol config)
+                                     (:host config)
+                                     (:api-path config))
+                                {:accept :json
+                                 :cookie-store cookie-store
+                                 :form-params query}))))
