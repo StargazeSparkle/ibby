@@ -15,5 +15,5 @@
   (def lgtoken (get-in
                (http-post login-query config)
                ["login" "token"]))
-  (def login-with-token (into (hash-map) [login-query {:lgtoken lgtoken}]))
+  (def login-with-token (assoc-in login-query [:lgtoken] lgtoken))
   (println (http-post login-with-token config)))
