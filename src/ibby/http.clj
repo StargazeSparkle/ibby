@@ -5,7 +5,7 @@
 
 (def cookie-store (cookies/cookie-store))
 
-(defn http-get
+(defn get
   "takes a query hashmap and a config struct and performs a GET to the API"
   [query config]
   (json/read-str (:body
@@ -17,7 +17,7 @@
                                 :cookie-store cookie-store
                                 :query-params query}))))
 
-(defn http-post
+(defn post
   "takes a query hashmap and a config struct and performs a POST to the API"
   [query config]
   (json/read-str (:body
