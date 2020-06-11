@@ -11,9 +11,6 @@ Requirements:
 
 Simply git-clone this repository and run `lein run` from inside of it.
 
-## Notes
-- Currently `clj-http` has some bug with how it calls the async API which raises bull-pointer exceptions in the JVM so for the time being this should not be used.
-
 ## Usage
 
 

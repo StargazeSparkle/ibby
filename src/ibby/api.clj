@@ -63,7 +63,7 @@
 ;;        not the edit failed (ss 6/10/20).
 (defn edit-prepend
   "Prepends to the content of a page.
-  This function in will completely replace the content of the page.
+  This function in will prepend to the content of the page.
   For functions that just append to or replace the page see:
   [[edit-append]] and [[edit-replace]]
   The string `page` is the title of the destination page.
@@ -81,7 +81,7 @@
 ;;        not the edit failed (ss 6/10/20).
 (defn edit-append
   "Appends to the content of a page.
-  This function in will completely replace the content of the page.
+  This function in will append to the content of the page.
   For functions that just append to or replace the page see:
   [[edit-prepend]] and [[edit-replace]]
   The string `page` is the title of the destination page.
