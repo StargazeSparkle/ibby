@@ -39,13 +39,13 @@
   (client/post (str (:protocol config)
                     (:host config)
                     (:api-path config))
-                    {:accept :json
-                     :async? true
-                     :cookie-policy :standard
-                     :cookie-store cookie-store
-                     :form-params query}
-                    success
-                    failure))
+               {:accept :json
+                :async? true
+                :cookie-policy :standard
+                :cookie-store cookie-store
+                :form-params query}
+               success
+               failure))
 
 (defn http-get
   "Performs an HTTP GET.
